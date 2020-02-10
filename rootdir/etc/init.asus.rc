@@ -152,6 +152,26 @@ on post-fs-data
     chown system shell /mnt/vendor/asusfw/audio/tfa98xx-sysfs.lck
     chmod 0777 /mnt/vendor/asusfw/audio/tfa98xx-sysfs.lck
 
+    chown system shell /mnt/vendor/asusfw/audio/0x34_aftercalmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/0x34_aftercalmtp.txt
+    chown system shell /mnt/vendor/asusfw/audio/0x34_origmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/0x34_origmtp.txt
+    chown system shell /mnt/vendor/asusfw/audio/0x35_aftercalmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/0x35_aftercalmtp.txt
+    chown system shell /mnt/vendor/asusfw/audio/0x35_origmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/0x35_origmtp.txt
+
+    chown system shell /mnt/vendor/asusfw/audio/spkcal_save_0x34_aftercalmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/spkcal_save_0x34_aftercalmtp.txt
+    chown system shell /mnt/vendor/asusfw/audio/spkcal_save_0x34_origmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/spkcal_save_0x34_origmtp.txt
+    chown system shell /mnt/vendor/asusfw/audio/spkcal_save_0x35_aftercalmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/spkcal_save_0x35_aftercalmtp.txt
+    chown system shell /mnt/vendor/asusfw/audio/spkcal_save_0x35_origmtp.txt
+    chmod 0777 /mnt/vendor/asusfw/audio/spkcal_save_0x35_origmtp.txt
+
+
+    setprop asus.music.file system/product/media/audio/ringtones/BluePiano.ogg
 #ASUS_BSP Audio calibration ---
 
 #ASUS_BSP Byron +++
@@ -477,17 +497,20 @@ on property:audio.calibration.spk=1
 on property:sys.asus.audiocalibration=1
     start check_spk_audiocal
 
+on property:persist.asus.audiocalibration=1
+    start check_spk_audiocal
+
 service check_spk_audiocal /vendor/bin/sh /vendor/etc/check_spkcal.sh
     user root
     group root
-    seclabel u:r:vendor_init:s0
+    seclabel u:r:asus_audio:s0
     disabled
     oneshot
 
 service check_rcv_audiocal /vendor/bin/sh /vendor/etc/check_rcvcal.sh
     user root
     group root
-    seclabel u:r:vendor_init:s0
+    seclabel u:r:asus_audio:s0
     disabled
     oneshot
 
