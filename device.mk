@@ -136,6 +136,7 @@ PRODUCT_PACKAGES += \
     WiFiFWTool.sh \
     WifiSARPower.sh \
     btwifimac.sh \
+    erase_batinfo.sh \
     gf_ver.sh \
     init.asus.thermal_conf.sh \
     init.class_main.sh \
@@ -157,6 +158,7 @@ PRODUCT_PACKAGES += \
     mount_apd.sh \
     parse.simcode.sh \
     qca6234-service.sh \
+    restore_batinfo.sh \
     sensors_factory_init.sh \
     ssr_cfg.sh \
     storage_status.sh \

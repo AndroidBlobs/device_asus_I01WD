@@ -1,5 +1,4 @@
 -app/aptxals/aptxals.apk
--app/aptxalsOverlay/aptxalsOverlay.apk
 -framework/WfdCommon.jar
 -lib/libantradio.so
 -lib64/libantradio.so

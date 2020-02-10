@@ -174,7 +174,6 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Bluetooth-AptX
 -app/aptxals/aptxals.apk
--app/aptxalsOverlay/aptxalsOverlay.apk
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -333,10 +332,6 @@ vendor/lib/camera/com.qti.sensormodule.imx586.bin
 vendor/lib/camera/com.qti.sensormodule.imx586_front.bin
 vendor/lib/camera/com.qti.sensormodule.ov13855_front_aux.bin
 vendor/lib/camera/com.qti.sensormodule.ov13855_rear_aux.bin
-vendor/lib/camera/com.qti.tuned.imx586_front.bin
-vendor/lib/camera/com.qti.tuned.imx586_rear.bin
-vendor/lib/camera/com.qti.tuned.ov13855_front.bin
-vendor/lib/camera/com.qti.tuned.ov13855_rear.bin
 vendor/lib/camera/components/com.arcsoft.node.hdrplusraw.so
 vendor/lib/camera/components/com.arcsoft.node.realtimebokeh.so
 vendor/lib/camera/components/com.arcsoft.node.supernightraw.so
@@ -543,6 +538,7 @@ vendor/lib/libarcsoft_hdr_plus_raw.so
 vendor/lib/libarcsoft_low_light_shot.so
 vendor/lib/libarcsoft_nighthawk.so
 vendor/lib/libarcsoft_piczoom.so
+vendor/lib/libarcsoft_rer.so
 vendor/lib/libarcsoft_super_night_raw.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_bokehplus_image.so
@@ -556,6 +552,7 @@ vendor/lib64/libarcsoft_hdr_plus_raw.so
 vendor/lib64/libarcsoft_low_light_shot.so
 vendor/lib64/libarcsoft_nighthawk.so
 vendor/lib64/libarcsoft_piczoom.so
+vendor/lib64/libarcsoft_rer.so
 vendor/lib64/libarcsoft_super_night_raw.so
 
 # Camera-bin
@@ -1960,8 +1957,6 @@ product/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
 product/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 product/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
 product/lib64/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/etc/init/vendor.qti.hardware.scve.objecttracker@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.scve.panorama@1.0-service.rc
 vendor/etc/scve/facereco/gModel.dat
 vendor/lib/libscveBlobDescriptor.so
 vendor/lib/libscveBlobDescriptor_stub.so
@@ -1979,8 +1974,6 @@ vendor/lib/libscveScan3D.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
-vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so
 vendor/lib64/libscveBlobDescriptor.so
 vendor/lib64/libscveBlobDescriptor_stub.so
 vendor/lib64/libscveCommon.so
@@ -1994,8 +1987,6 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libscvePanorama.so
 vendor/lib64/libscvePanorama_lite.so
 vendor/lib64/libscveScan3D.so
-vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
 # SSR
 vendor/bin/ssr_cfg.sh
@@ -2006,12 +1997,6 @@ vendor/lib/libSubSystemShutdown.so
 vendor/lib/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
 vendor/lib64/libsubsystem_control.so
-
-# Seccam
-vendor/bin/hw/vendor.qti.hardware.seccam@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.seccam@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.seccam@1.0.so
-vendor/lib64/vendor.qti.hardware.seccam@1.0.so
 
 # Sensor-calibrate
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
@@ -2122,9 +2107,6 @@ vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
 
 # Touch-improve
--vendor/app/com.qualcomm.qti.improvetouch.service/com.qualcomm.qti.improvetouch.service.apk
--vendor/app/com.qualcomm.qti.improvetouch.service/oat/arm64/com.qualcomm.qti.improvetouch.service.odex
--vendor/app/com.qualcomm.qti.improvetouch.service/oat/arm64/com.qualcomm.qti.improvetouch.service.vdex
 vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
 vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
 vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
@@ -2268,15 +2250,9 @@ vendor/app/CACertService/oat/arm64/CACertService.vdex
 -vendor/app/CneApp/CneApp.apk
 vendor/app/CneApp/oat/arm64/CneApp.odex
 vendor/app/CneApp/oat/arm64/CneApp.vdex
--vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk
-vendor/app/ConnectionSecurityService/oat/arm64/ConnectionSecurityService.odex
-vendor/app/ConnectionSecurityService/oat/arm64/ConnectionSecurityService.vdex
 -vendor/app/IWlanService/IWlanService.apk
 vendor/app/IWlanService/oat/arm64/IWlanService.odex
 vendor/app/IWlanService/oat/arm64/IWlanService.vdex
-vendor/app/SSGTelemetryService/oat/arm64/SSGTelemetryService.odex
-vendor/app/SSGTelemetryService/oat/arm64/SSGTelemetryService.vdex
--vendor/app/SSGTelemetryService/SSGTelemetryService.apk
 vendor/app/TimeService/oat/arm64/TimeService.odex
 vendor/app/TimeService/oat/arm64/TimeService.vdex
 vendor/app/TrustZoneAccessService/oat/arm64/TrustZoneAccessService.odex

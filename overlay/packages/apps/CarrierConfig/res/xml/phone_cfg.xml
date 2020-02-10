@@ -20,6 +20,12 @@
         <boolean name="disable_voice_barring_notification_bool" value="true" />
         <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
     </carrier_config>
+    <carrier_config country="BR">
+        <string-array name="unloggable_numbers_string_array" num="2">
+            <item value="180" />
+            <item value="181" />
+        </string-array>
+    </carrier_config>
     <carrier_config cid="1385">
         <string name="default_vm_number_string">*100</string>
     </carrier_config>
@@ -33,11 +39,7 @@
         <string name="default_vm_number_string">*100</string>
     </carrier_config>
     <carrier_config cid="530">
-        <string name="default_vm_number_string">*555</string>
-        <string-array name="unloggable_numbers_string_array" num="2">
-            <item value="180" />
-            <item value="181" />
-        </string-array>
+        <string name="default_vm_number_string">*100</string>
     </carrier_config>
     <carrier_config cid="2237">
         <boolean name="world_phone_bool" value="false" />

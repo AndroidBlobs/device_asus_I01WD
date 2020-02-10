@@ -404,12 +404,11 @@ on property:sys.boot_completed=1
 on property:persist.google.assistant.enable=*
     write /sys/devices/platform/soc/soc\:asustek_googlekey/googlekey_enable ${persist.google.assistant.enable}
 
-service WiFiFWTool /vendor/bin/WiFiFWTool.sh
+service WiFiFWTool /vendor/bin/sh /vendor/bin/WiFiFWTool.sh
     class core
     user root
     group root
     disabled
-    seclabel u:r:vendor_init:s0
     oneshot
 
 on property:persist.vendor.asus.wlanfwdbg=*
@@ -529,31 +528,31 @@ on property:vendor.debug.camera.lasercsc=2
 on property:vendor.debug.camera.lasercsc=100
     start asuslasercsc_updateCaliData
 
-service asuslasercsc_stopLaser /vendor/bin/lasercsc 0
+service asuslasercsc_stopLaser /vendor/bin/sh /vendor/bin/lasercsc 0
     user root
     group root
-    seclabel u:r:vendor_init:s0
+    seclabel u:r:asus_laser:s0
     disabled
     oneshot
 
-service asuslasercsc_startLaser /vendor/bin/lasercsc 1
+service asuslasercsc_startLaser /vendor/bin/sh /vendor/bin/lasercsc 1
     user root
     group root
-    seclabel u:r:vendor_init:s0
+    seclabel u:r:asus_laser:s0
     disabled
     oneshot
 
-service asuslasercsc_readValue /vendor/bin/lasercsc 2
+service asuslasercsc_readValue /vendor/bin/sh /vendor/bin/lasercsc 2
     user root
     group root
-    seclabel u:r:vendor_init:s0
+    seclabel u:r:asus_laser:s0
     disabled
     oneshot
 
-service asuslasercsc_updateCaliData /vendor/bin/lasercsc 100
-    user root
-    group root
-    seclabel u:r:vendor_init:s0
+service asuslasercsc_updateCaliData /vendor/bin/sh /vendor/bin/lasercsc 100
+    user system
+    group system
+    seclabel u:r:asus_laser:s0
     disabled
     oneshot
 
